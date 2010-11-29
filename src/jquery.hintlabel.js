@@ -14,11 +14,11 @@
 			// to avoid parsing the DOM again and again
 			var label = $(this);
 			var text  = label.text();
-			var field = label.next(defaults.allowedFieldsTypes);
+			var field = label.next("#"+label.attr("for"));
 			
 			// if the next field does not exist or is not of allowed
 			// type, we have nothing to do
-			if (field.length == 0)
+			if (field.length == 0 || !field.is(defaults.allowedFieldsTypes))
 		    return;
 		
 			// hide the original label
