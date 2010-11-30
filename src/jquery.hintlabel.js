@@ -2,7 +2,7 @@
 	$.fn.hintlabel = function(settings){
 		
 		// defaults values:
-		var defaults = { allowedFieldsTypes: 'input[type=text], textarea' };
+		var defaults = { allowedFieldsTypes: 'input[type=text], textarea', autoRefill: true };
 		
 		// merge defaults with the specified settings
 		$.extend(defaults, settings);
@@ -32,7 +32,7 @@
 				.focus(function() {
 					// if the value is equal to the label's text, 
 					// remove it on focus
-					if (field.val() == text) field.val('');
+					if (field.val() == text && defaults.autoRefill) field.val('');
 				})
 				.blur(function() {
 					// if the value is empty on blur,
