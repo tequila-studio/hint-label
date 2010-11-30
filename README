@@ -6,3 +6,12 @@ So don't expect too much of the code.
 
 If you need to do the exact same thing I had in mind, be my guest and use this.
 If you have never written a jQuery plugin before, this could be considered as some sort of minimalistic plugin (and you might want to check out the online doc for authoring plugins here: http://docs.jquery.com/Plugins/Authoring).
+
+Usage
+-----
+
+Just call hintlabel on a jQuery object collection. For every item in this collection, the plugin will search for a text input or a textarea element using the label's "for" attribute (which should point to the corresponding form element). The label will be hidden and its' text value will be displayed as "default" value inside the form element. 
+
+There are two available options:
+- allowedFieldsTypes is a selector (as in "jQuery selector") that the form's field must match to be considered. Default value is "input[type=text], textarea".
+- autoRefill allows you to disable the automatic refill of the field by the label's text when the field fires the blur event and it's value is empty. Default is true, set it to false to disable the behavior.
