@@ -1,1 +1,8 @@
-Just playing with git, github & Tower.
+hintlabel is a plugin for jQuery, that allows a label to be displayed has a "hint" inside its target input or textarea.
+This is a extremely simple plugin and it only provides a basic functionnality, with very few options.
+
+I put this on github mainly to store it somewhere safe and convenient, and because I wanted to give a shot at git & github.
+So don't expect too much of the code. 
+
+If you need to do the exact same thing I had in mind, be my guest and use this.
+If you have never written a jQuery plugin before, this could be considered as some sort of minimalistic plugin (and you might want to check out the online doc for authoring plugins here: http://docs.jquery.com/Plugins/Authoring).

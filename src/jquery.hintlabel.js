@@ -32,12 +32,12 @@
 				.focus(function() {
 					// if the value is equal to the label's text, 
 					// remove it on focus
-					if (field.val() == text && defaults.autoRefill) field.val('');
+					if (field.val() == text) field.val('');
 				})
 				.blur(function() {
 					// if the value is empty on blur,
 					// replace it with text
-					if (field.val() == '') field.val(text);
+					if (field.val() == '' && defaults.autoRefill) field.val(text);
 				})
 		})
 	}
